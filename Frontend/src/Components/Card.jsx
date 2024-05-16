@@ -1,6 +1,4 @@
 import React from 'react'
-import image from "../assets/image.jpeg";
-
 
 function Card({...data}) {
   console.log(data);

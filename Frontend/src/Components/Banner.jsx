@@ -14,9 +14,7 @@ export default function Banner() {
           <p className="font-semibold">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas animi ullam ipsum nulla, debitis doloribus qui ad temporibus quas officia illo sint velit beatae facilis suscipit. Repellat molestiae perspiciatis dignissimos!
           </p>
-          
-          {/* <input type="text" placeholder="Enter your Email to Login" className="input input-bordered input-info w-full max-w-xs" /> */}
-          
+                    
         </div>
         {/* Right Part */}
         <div className="right md:flex-1">
