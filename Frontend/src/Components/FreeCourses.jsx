@@ -42,11 +42,12 @@ function FreeCourses() {
   };
 
   const data = Record.filter((obj) => obj.price === 0.00);
-  console.log(data);
+  // console.log(data);
 
   return (
     <>
-      <div className='max-w-screen-2xl container md:px-20 my-20 px-10 h-[100]'>
+      <div className='max-w-screen-2xl container md:px-20 py-20 px-10 h-[100] dark:bg-slate-700 '>
+      <h1 className='text-2xl font-semibold underline underline-offset-8 decoration-4 decoration-sky-500 tracking-wide  my-10 dark:text-white'> Free Books </h1>
         <div className="slider-container">
           <Slider {...settings}>
             {data.map((course, index) => (

@@ -3,7 +3,7 @@ import image from "../assets/books.jpg"
 export default function Banner() {
   return (
     <>
-      <div className="max-w-screen-2xl container md:px-20 py-10 px-10 flex h-[100] flex-col-reverse md:flex-row">
+      <div className="max-w-screen-2xl container md:px-20 py-10 px-10 flex h-[100] flex-col-reverse md:flex-row dark:bg-slate-800 dark:text-white">
         {/* Left part */}
         <div className="left md:flex-1 justify-between flex-col">
           

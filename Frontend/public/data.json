@@ -1,0 +1,283 @@
+[
+    {
+        "key": 1,
+        "title": "The Great Gatsby",
+        "category": "Novel",
+        "price": 12.99,
+        "description": "Classic tale of love fantasy and excess",
+        "rating": 4.50,
+       "url": "https://cdn.i-scmp.com/sites/default/files/styles/landscape/public/d8/images/2020/08/31/books.jpg?itok=j0mtODw9"
+    },
+    {
+        "key": 2,
+        "title": "Harry Potter and the Sorcerer's Stone",
+        "category": "Fantasy",
+        "price": 15.99,
+        "description": "Magical adventure of a young wizard",
+        "rating": 4.8,
+       "url": "https://cdn.i-scmp.com/sites/default/files/styles/landscape/public/d8/images/2020/08/31/books.jpg?itok=j0mtODw9"
+    },
+    {
+        "key": 3,
+        "title": "To Kill a Mockingbird",
+        "category": "Novel",
+        "price": 10.50,
+        "description": "Story of racial injustice in the South",
+        "rating": 4.9,
+       "url": "https://cdn.i-scmp.com/sites/default/files/styles/landscape/public/d8/images/2020/08/31/books.jpg?itok=j0mtODw9"
+    },
+    {
+        "key": 4,
+        "title": "1984",
+        "category": "Dystopian",
+        "price": 9.99,
+        "description": "Orwell's vision of a totalitarian future",
+        "rating": 4.7,
+       "url": "https://cdn.i-scmp.com/sites/default/files/styles/landscape/public/d8/images/2020/08/31/books.jpg?itok=j0mtODw9"
+    },
+    {
+        "key": 5,
+        "title": "The Catcher in the Rye",
+        "category": "Novel",
+        "price": 11.25,
+        "description": "Coming-of-age novel of teenage angst",
+        "rating": 4.4,
+       "url": "https://cdn.i-scmp.com/sites/default/files/styles/landscape/public/d8/images/2020/08/31/books.jpg?itok=j0mtODw9"
+    },
+    {
+        "key": 6,
+        "title": "The Hobbit",
+        "category": "Fantasy",
+        "price": 0.00,
+        "description": "Bilbo's unexpected journey",
+        "rating": 4.8,
+       "url": "https://cdn.i-scmp.com/sites/default/files/styles/landscape/public/d8/images/2020/08/31/books.jpg?itok=j0mtODw9"
+    },
+    {
+        "key": 7,
+        "title": "Pride and Prejudice",
+        "category": "Romance",
+        "price": 8.99,
+        "description": "Jane Austen's classic love story",
+        "rating": 4.6,
+       "url": "https://cdn.i-scmp.com/sites/default/files/styles/landscape/public/d8/images/2020/08/31/books.jpg?itok=j0mtODw9"
+    },
+    {
+        "key": 8,
+        "title": "The Alchemist",
+        "category": "Fiction",
+        "price": 14.75,
+        "description": "Quest for one's destiny",
+        "rating": 4.3,
+       "url": "https://cdn.i-scmp.com/sites/default/files/styles/landscape/public/d8/images/2020/08/31/books.jpg?itok=j0mtODw9"
+    },
+    {
+        "key": 9,
+        "title": "Lord of the Flies",
+        "category": "Adventure",
+        "price": 0.00,
+        "description": "Survival tale of stranded boys",
+        "rating": 4.5,
+       "url": "https://cdn.i-scmp.com/sites/default/files/styles/landscape/public/d8/images/2020/08/31/books.jpg?itok=j0mtODw9"
+    },
+    {
+        "key": 10,
+        "title": "The Da Vinci Code",
+        "category": "Thriller",
+        "price": 13.49,
+        "description": "Mystery of religious symbolism",
+        "rating": 4.2,
+       "url": "https://cdn.i-scmp.com/sites/default/files/styles/landscape/public/d8/images/2020/08/31/books.jpg?itok=j0mtODw9"
+    },
+    {
+        "key": 11,
+        "title": "The Hunger Games",
+        "category": "Dystopian",
+        "price": 10.99,
+        "description": "Fight to the death in a dystopian society",
+        "rating": 4.7,
+       "url": "https://cdn.i-scmp.com/sites/default/files/styles/landscape/public/d8/images/2020/08/31/books.jpg?itok=j0mtODw9"
+    },
+    {
+        "key": 12,
+        "title": "The Hitchhiker's Guide to the Galaxy",
+        "category": "Science Fiction",
+        "price": 0.00,
+        "description": "Interstellar comedy adventure",
+        "rating": 4.6,
+       "url": "https://cdn.i-scmp.com/sites/default/files/styles/landscape/public/d8/images/2020/08/31/books.jpg?itok=j0mtODw9"
+    },
+    {
+        "key": 13,
+        "title": "The Adventures of Sherlock Holmes",
+        "category": "Mystery",
+        "price": 7.99,
+        "description": "Classic detective stories",
+        "rating": 4.5,
+       "url": "https://cdn.i-scmp.com/sites/default/files/styles/landscape/public/d8/images/2020/08/31/books.jpg?itok=j0mtODw9"
+    },
+    {
+        "key": 14,
+        "title": "A Tale of Two Cities",
+        "category": "Historical Fiction",
+        "price": 10.25,
+        "description": "Tale of love and sacrifice during the French Revolution",
+        "rating": 4.4,
+       "url": "https://cdn.i-scmp.com/sites/default/files/styles/landscape/public/d8/images/2020/08/31/books.jpg?itok=j0mtODw9"
+    },
+    {
+        "key": 15,
+        "title": "The Shining",
+        "category": "Horror",
+        "price": 11.99,
+        "description": "Psychological thriller in a haunted hotel",
+        "rating": 4.6,
+       "url": "https://cdn.i-scmp.com/sites/default/files/styles/landscape/public/d8/images/2020/08/31/books.jpg?itok=j0mtODw9"
+    },
+    {
+        "key": 16,
+        "title": "Brave New World",
+        "category": "Dystopian",
+        "price": 0.00,
+        "description": "Aldous Huxley's vision of a future utopia",
+        "rating": 4.7,
+       "url": "https://cdn.i-scmp.com/sites/default/files/styles/landscape/public/d8/images/2020/08/31/books.jpg?itok=j0mtODw9"
+    },
+    {
+        "key": 17,
+        "title": "The Girl with the Dragon Tattoo",
+        "category": "Mystery",
+        "price": 12.49,
+        "description": "Investigation of a decades-old disappearance",
+        "rating": 4.3,
+       "url": "https://cdn.i-scmp.com/sites/default/files/styles/landscape/public/d8/images/2020/08/31/books.jpg?itok=j0mtODw9"
+    },
+    {
+        "key": 18,
+        "title": "Moby-Dick",
+        "category": "Adventure",
+        "price": 9.75,
+        "description": "Epic tale of Captain Ahab and the white whale",
+        "rating": 4.1,
+       "url": "https://cdn.i-scmp.com/sites/default/files/styles/landscape/public/d8/images/2020/08/31/books.jpg?itok=j0mtODw9"
+    },
+    {
+        "key": 19,
+        "title": "The Road",
+        "category": "Post-Apocalyptic",
+        "price": 0.00,
+        "description": "Father and son journey through a desolate world",
+        "rating": 4.5,
+       "url": "https://cdn.i-scmp.com/sites/default/files/styles/landscape/public/d8/images/2020/08/31/books.jpg?itok=j0mtODw9"
+    },
+    {
+        "key": 20,
+        "title": "The Chronicles of Narnia",
+        "category": "Fantasy",
+        "price": 17.99,
+        "description": "Magical adventures in a fantasy world",
+        "rating": 4.8,
+       "url": "https://cdn.i-scmp.com/sites/default/files/styles/landscape/public/d8/images/2020/08/31/books.jpg?itok=j0mtODw9"
+    },
+    {
+        "key": 21,
+        "title": "Gone with the Wind",
+        "category": "Historical Fiction",
+        "price": 13.25,
+        "description": "Epic romance set during the Civil War",
+        "rating": 4.4,
+       "url": "https://cdn.i-scmp.com/sites/default/files/styles/landscape/public/d8/images/2020/08/31/books.jpg?itok=j0mtODw9"
+    },
+
+    {
+        "key": 22,
+        "title": "Dune",
+        "category": "Science Fiction",
+        "price": 18.99,
+        "description": "Epic tale of a desert planet and its people",
+        "rating": 4.8,
+        "url": "https://cdn.i-scmp.com/sites/default/files/styles/landscape/public/d8/images/2020/08/31/books.jpg?itok=j0mtODw9"
+    },
+    {
+        "key": 23,
+        "title": "Ender's Game",
+        "category": "Science Fiction",
+        "price": 12.75,
+        "description": "Young genius trained to defend Earth from aliens",
+        "rating": 4.7,
+        "url": "https://cdn.i-scmp.com/sites/default/files/styles/landscape/public/d8/images/2020/08/31/books.jpg?itok=j0mtODw9"
+    },
+    {
+        "key": 24,
+        "title": "The Diary of a Young Girl",
+        "category": "Biography",
+        "price": 9.99,
+        "description": "Anne Frank's diary during the Holocaust",
+        "rating": 4.9,
+        "url": "https://cdn.i-scmp.com/sites/default/files/styles/landscape/public/d8/images/2020/08/31/books.jpg?itok=j0mtODw9"
+    },
+    {
+        "key": 25,
+        "title": "Long Walk to Freedom",
+        "category": "Biography",
+        "price": 15.50,
+        "description": "Nelson Mandela's autobiography",
+        "rating": 4.8,
+        "url": "https://cdn.i-scmp.com/sites/default/files/styles/landscape/public/d8/images/2020/08/31/books.jpg?itok=j0mtODw9"
+    },
+    {
+        "key": 26,
+        "title": "All the Light We Cannot See",
+        "category": "Historical Fiction",
+        "price": 14.00,
+        "description": "A blind French girl and a German boy in WWII",
+        "rating": 4.6,
+        "url": "https://cdn.i-scmp.com/sites/default/files/styles/landscape/public/d8/images/2020/08/31/books.jpg?itok=j0mtODw9"
+    },
+    {
+        "key": 27,
+        "title": "The Nightingale",
+        "category": "Historical Fiction",
+        "price": 13.99,
+        "description": "Two sisters in Nazi-occupied France",
+        "rating": 4.7,
+        "url": "https://cdn.i-scmp.com/sites/default/files/styles/landscape/public/d8/images/2020/08/31/books.jpg?itok=j0mtODw9"
+    },
+    {
+        "key": 28,
+        "title": "The Girl on the Train",
+        "category": "Thriller",
+        "price": 10.99,
+        "description": "A woman's life becomes entangled in a missing person's investigation",
+        "rating": 4.4,
+        "url": "https://cdn.i-scmp.com/sites/default/files/styles/landscape/public/d8/images/2020/08/31/books.jpg?itok=j0mtODw9"
+    },
+    {
+        "key": 29,
+        "title": "Gone Girl",
+        "category": "Thriller",
+        "price": 11.50,
+        "description": "A thriller about a marriage gone wrong",
+        "rating": 4.5,
+        "url": "https://cdn.i-scmp.com/sites/default/files/styles/landscape/public/d8/images/2020/08/31/books.jpg?itok=j0mtODw9"
+    },
+    {
+        "key": 30,
+        "title": "Me Before You",
+        "category": "Romance",
+        "price": 9.25,
+        "description": "A love story between a caregiver and her paralyzed charge",
+        "rating": 4.3,
+        "url": "https://cdn.i-scmp.com/sites/default/files/styles/landscape/public/d8/images/2020/08/31/books.jpg?itok=j0mtODw9"
+    },
+    {
+        "key": 31,
+        "title": "The Notebook",
+        "category": "Romance",
+        "price": 8.50,
+        "description": "A timeless love story spanning decades",
+        "rating": 4.4,
+        "url": "https://cdn.i-scmp.com/sites/default/files/styles/landscape/public/d8/images/2020/08/31/books.jpg?itok=j0mtODw9"
+    }
+]
+
