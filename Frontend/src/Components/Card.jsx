@@ -23,7 +23,7 @@ function Card({...data}) {
 
 
 
-<div className="card w-64 md:w-80 bg-base-100 shadow-xl align-center hover:shadow-2xl">
+<div className="card w-64 md:w-80 bg-base-100 shadow-xl align-center hover:shadow-2xl ">
   <figure><img src={data.url} alt={data.title} /></figure>
   <div className="card-body">
     <h2 className="card-title ">

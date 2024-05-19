@@ -40,7 +40,6 @@ function Course() {
     ]
   };
     const data = Record.filter((obj) => obj.rating>4.5 && obj.price>0);
-  // console.log(data);
   return (
     <>
       <div className='max-w-screen-2xl container md:px-20 px-7 dark:bg-slate-800 '>
@@ -48,7 +47,7 @@ function Course() {
           <h1 className='text-4xl font-semibold'> We're delighted to have you <span className='text-red-400'>Here! :) </span></h1>
           <p className='my-10 font-semibold' >Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae non nemo enim quia a illo earum, eveniet maiores ad possimus magnam nihil nobis, voluptates quod ipsum corporis dolores placeat unde?
             Recusandae, iste illum dolor!</p>
-          <button className="btn btn-secondary w-20 self-center text-lg tracking-wide"
+          <button className="btn btn-secondary w-20 self-center text-lg tracking-wide "
             onClick={() => navigate("/")}>Back</button>
         </div>
 
