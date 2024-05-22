@@ -1,14 +1,15 @@
 import React from 'react';
+import { useForm } from "react-hook-form" 
 
 const Login = ({setOpenLogin}) => {
-  const email=document.getElementById('emaill');
-  const password=document.getElementById('password');
- function display() {
-  console.log(email.value);
-  console.log(password.value);
- }
- const btn=document.getElementById("button");
- btn?.addEventListener("click",display);
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm()
+
+  const onSubmit = (data) => console.log(data)
   return (
     <div
       id="login-popup"
@@ -86,30 +87,26 @@ const Login = ({setOpenLogin}) => {
               <div className="h-px w-full bg-slate-200"></div>
             </div>
 
-            <form className="w-full">
+            <form className="w-full"  onSubmit={handleSubmit(onSubmit)}>
               <label htmlFor="email" className="sr-only">
                 Email address
               </label>
               <input
-                id="emaill"
                 name="email"
                 type="email"
-                autoComplete="email"
-                required
                 className="block w-full rounded-lg border border-gray-300 px-3 py-2 shadow-sm outline-none placeholder:text-gray-400 focus:ring-2 focus:ring-black focus:ring-offset-1"
                 placeholder="Email Address"
+                {...register("email", { required: true })}
               />
               <label htmlFor="password" className="sr-only">
                 Password
               </label>
               <input
-              id='password'
                 name="password"
                 type="password"
-                autoComplete="current-password"
-                required
                 className="mt-2 block w-full rounded-lg border border-gray-300 px-3 py-2 shadow-sm outline-none placeholder:text-gray-400 focus:ring-2 focus:ring-black focus:ring-offset-1"
                 placeholder="Password"
+                {...register("password", { required: true })}
                 />
               <p className="mb-3 mt-2 text-sm text-gray-500">
                 <a href="/forgot-password" className="text-blue-800 hover:text-blue-600">
@@ -117,10 +114,8 @@ const Login = ({setOpenLogin}) => {
                 </a>
               </p>
               <button
-                id="button"
                 type="submit"
                 className="inline-flex w-full items-center justify-center rounded-lg bg-black p-2 py-3 text-sm font-medium text-white outline-none focus:ring-2 focus:ring-black focus:ring-offset-1 disabled:bg-gray-400"
-                onClick={display}
               >
                 Continue
               </button>
