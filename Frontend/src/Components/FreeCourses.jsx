@@ -1,11 +1,26 @@
-import React, { useState } from 'react'
-import Record from "../../public/data.json";
+import React, { useState,useEffect } from 'react'
 import Slider from "react-slick";
 
 import Card from './Card';
-
+let Record; 
+import axios from "axios"
 
 function FreeCourses() {
+  const [books,setbooks]=useState([]);
+
+  useEffect(()=>{
+    const getBook=async()=>{
+      try {
+        const res=await axios.get("http://localhost:8000/book")
+        Record=res.data;
+        setbooks(Record);
+        
+        } catch (error) {
+          console.log("Error",error);
+        }
+    };
+    getBook();
+  },[])
   const settings = {
     dots: true,
     infinite: false,
@@ -41,7 +56,7 @@ function FreeCourses() {
     ]
   };
 
-  const data = Record.filter((obj) => obj.price === 0.00);
+  const data = books.filter((obj) => obj.price === 0.00);
   // console.log(data);
 
   return (

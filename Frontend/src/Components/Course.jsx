@@ -1,10 +1,26 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Slider from 'react-slick';
 import Card from './Card';
-import Record from "../../public/data.json";
+let Record; 
+import axios from "axios"
 function Course() {
   const navigate = useNavigate();
+  const [books,setbooks]=useState([]);
+
+  useEffect(()=>{
+    const getBook=async()=>{
+      try {
+        const res=await axios.get("http://localhost:8000/book")
+        Record=res.data;
+        setbooks(Record);
+        
+        } catch (error) {
+          console.log("Error",error);
+        }
+    };
+    getBook();
+  },[])
   const settings = {
     dots: true,
     infinite: false,
@@ -39,7 +55,7 @@ function Course() {
       }
     ]
   };
-    const data = Record.filter((obj) => obj.rating>4.5 && obj.price>0);
+    const data = books.filter((obj) => obj.rating>4.5 && obj.price>0);
   return (
     <>
       <div className='max-w-screen-2xl container md:px-20 px-7 dark:bg-slate-800 '>
