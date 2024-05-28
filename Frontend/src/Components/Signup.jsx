@@ -1,14 +1,41 @@
-import React, { useState } from 'react';
-import { useForm } from "react-hook-form" 
+import React from 'react';
+import axios from "axios";
+import { useForm } from "react-hook-form";
+import { useNavigate } from 'react-router-dom';
+
 const Signup = () => {
+  const navigate = useNavigate();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
 
-    const {
-      register,
-      handleSubmit,
-      formState: { errors },
-    } = useForm()
+  const onSubmit = async (data) => {
+    const userInfo = {
+      fullname: data.name,
+      email: data.email,
+      password: data.password,
+    };
 
-    const onSubmit = (data) => console.log(data)
+    try {
+      const res = await axios.post("http://localhost:8000/user/signup", userInfo);
+      console.log(res.data);
+      if (res.data) {
+        alert("Signup Successful");
+        localStorage.setItem("User", JSON.stringify(res.data.user));
+        navigate('/');
+        window.location.reload();
+      }
+    } catch (error) {
+      if (error.response && error.response.data && error.response.data.message) {
+        alert("Error: " + error.response.data.message);
+      } else {
+        alert("An error occurred during signup.");
+      }
+      console.log(error);
+    }
+  };
 
   return (
     <>
@@ -32,7 +59,6 @@ const Signup = () => {
                   className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   placeholder="Emelia Erickson"
                   {...register("name", { required: true })}
-                 
                 />
               </div>
               <div>
@@ -45,7 +71,6 @@ const Signup = () => {
                   id="email"
                   className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   placeholder="emelia_erickson24@gmail.com"
-                 
                   {...register("email", { required: true })}
                 />
               </div>
@@ -57,11 +82,8 @@ const Signup = () => {
                   type="password"
                   name="password"
                   id="password"
-                  placeholder=""
                   className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                
                   {...register("password", { required: true })}
-                  
                 />
               </div>
               <button

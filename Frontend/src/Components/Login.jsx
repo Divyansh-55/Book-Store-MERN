@@ -1,15 +1,41 @@
 import React from 'react';
+import axios from "axios"
 import { useForm } from "react-hook-form" 
 
 const Login = ({setOpenLogin}) => {
-
+  
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm()
 
-  const onSubmit = (data) => console.log(data)
+  const onSubmit = async(data) => {
+    const userInfo={
+      email:data.email,
+      password:data.password
+    }
+    await axios.post("http://localhost:8000/user/login",userInfo)
+    .then((res)=>{
+      console.log(res.data);
+      localStorage.setItem("User",JSON.stringify(res.data.user));
+      if(res.data){
+        setOpenLogin(false)
+        setTimeout(()=>{
+          alert("Login Sucessfull");
+          window.location.reload();
+        },2000)
+      }
+    })
+    .catch((error)=>{
+      if(error){
+        console.log(error);
+        alert("Error : "+error.response.data.message);
+        setTimeout(()=>{},3000);
+      }
+      console.log(error);
+    })
+  }
   return (
     <div
       id="login-popup"
@@ -87,7 +113,7 @@ const Login = ({setOpenLogin}) => {
               <div className="h-px w-full bg-slate-200"></div>
             </div>
 
-            <form className="w-full"  onSubmit={handleSubmit(onSubmit)}>
+            <form className="w-full"  onSubmit={handleSubmit(onSubmit)}  >
               <label htmlFor="email" className="sr-only">
                 Email address
               </label>
