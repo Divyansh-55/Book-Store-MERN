@@ -6,7 +6,7 @@ import FreeCourses from '../Components/Freecourses.jsx'
 
 export default function Home() {
   return (
-    <div >
+    <div>
       <Banner/>
       <FreeCourses/>
     </div>

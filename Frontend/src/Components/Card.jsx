@@ -1,7 +1,6 @@
 import React from 'react'
 
 function Card({...data}) {
-  // console.log(data);
   return (
     <>
     {/* Self devloped Card Component */}

@@ -57,7 +57,6 @@ function FreeCourses() {
   };
 
   const data = books.filter((obj) => obj.price === 0.00);
-  // console.log(data);
 
   return (
     <>

@@ -16,7 +16,7 @@ export const signUp = async (req, res) => {
         await createUser.save();
         res.status(201).json({ message: "Account created successfully",
             user:{
-                _id:createUser._id,
+                _id:createUser._id,   
                 fullname:createUser.fullname,
                 email:createUser.email
             }

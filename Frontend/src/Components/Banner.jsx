@@ -12,8 +12,7 @@ export default function Banner() {
           </h1>
           
           <p className="font-semibold">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas animi ullam ipsum nulla, debitis doloribus qui ad temporibus quas officia illo sint velit beatae facilis suscipit. Repellat molestiae perspiciatis dignissimos!
-          </p>
+          Book Haven is your ultimate online destination for book lovers. Explore a vast collection of titles across genres, from bestsellers to rare finds, all at unbeatable prices. Enjoy a seamless shopping experience with fast delivery, secure payments, and personalized recommendations tailored just for you.          </p>
                     
         </div>
         {/* Right Part */}

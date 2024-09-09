@@ -49,7 +49,7 @@ export default function Navbar() {
                                         strokeLinejoin="round"
                                         strokeWidth="2"
                                         d="M4 6h16M4 12h8m-8 6h16" />
-                                </svg>
+                                </svg>     
                             </div>
                             <ul tabIndex={0} className="menu max-h-screen z-[20] bg-slate-300 rounded-lg menu-sm dropdown-content mt-3 z-[1] pl-5 w-30 text-3xl font-bold">
                                 <li onClick={() => navigate('/')}><a>Home</a></li>

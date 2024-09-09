@@ -8,7 +8,7 @@ function Logout() {
                 ...authUser,
                 user:null
             })
-            localStorage.clear("User")
+            localStorage.clear()
             alert("Logout Sucessfull");
             window.location.reload();
             setTimeout(()=>{
