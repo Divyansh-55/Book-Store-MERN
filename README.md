@@ -47,13 +47,13 @@ npm install
 ```
 
 **5. Set up environment variables:**
-# Create a .env file in the backend directory with the following content:
+- Create a .env file in the backend directory with the following content:
 ```
 echo "MONGO_URI=your_mongo_db_connection_string" >> ../backend/.env
 echo "JWT_SECRET=your_jwt_secret" >> ../backend/.env
 ```
 
-** 6. Run the backend server**
+**6. Run the backend server**
 ```
 cd ../backend
 npm start
