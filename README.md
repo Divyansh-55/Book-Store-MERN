@@ -66,7 +66,8 @@ npm start
 ```
 
 **8. The app should now be running on:**
-```
-# - Frontend: http://localhost:3000
-# - Backend: http://localhost:8000
-```
+
+ - Frontend:
+ ``` http://localhost:3000 ```
+ - Backend:
+ ``` http://localhost:8000 ```
