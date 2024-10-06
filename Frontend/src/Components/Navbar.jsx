@@ -38,7 +38,7 @@ export default function Navbar() {
             <div className={`max-w-screen-2xl container md:px-20 sticky bg-slate-100 top-0 z-20 dark:bg-slate-900 dark:text-white`}>
                 <div className="navbar">
                     <div className="navbar-start">
-                        <div className="dropdown">
+                        <div className="dropdown no-scrollbar">
                             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
                                 <svg xmlns="http://www.w3.org/2000/svg"
                                     className="h-5 w-5"

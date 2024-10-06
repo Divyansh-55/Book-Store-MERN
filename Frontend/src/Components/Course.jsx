@@ -11,7 +11,7 @@ function Course() {
   useEffect(()=>{
     const getBook=async()=>{
       try {
-        const res=await axios.get("http://localhost:8000/book")
+        const res=await axios.get("http://localhost:8000/book/premium")
         Record=res.data;
         setbooks(Record);
         
@@ -55,7 +55,7 @@ function Course() {
       }
     ]
   };
-    const data = books.filter((obj) => obj.price>0);
+    const data = books.slice(0,15);
   return (
     <>
       <div className='max-w-screen-2xl container md:px-20 px-7 dark:bg-slate-800 '>

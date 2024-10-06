@@ -1,40 +1,48 @@
-import React from 'react';
-import axios from "axios"
-import { useForm } from "react-hook-form" 
+import { useState } from 'react';
+import axios from "axios";
+import { useForm } from "react-hook-form";
+import { FaEye, FaEyeSlash } from 'react-icons/fa';
 
-const Login = ({setOpenLogin}) => {
-  
+const Login = ({ setOpenLogin }) => {
+  const [showPassword, setShowPassword] = useState(false);
+
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
+  };
+
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm()
+  } = useForm();
 
-  const onSubmit = async(data) => {
-    const userInfo={
-      email:data.email,
-      password:data.password
-    }
-    await axios.post("http://localhost:8000/user/login",userInfo)
-    .then((res)=>{
-      localStorage.setItem("User",JSON.stringify(res.data.user));
-      if(res.data){
-        setOpenLogin(false)
-        setTimeout(()=>{
-          alert("Login Sucessfull");
-          window.location.reload();
-        },2000)
-      }
-    })
-    .catch((error)=>{
-      if(error){
+  const onSubmit = async (data) => {
+    const userInfo = {
+      email: data.email,
+      password: data.password,
+    };
+    await axios
+      .post("http://localhost:8000/user/login", userInfo)
+      .then((res) => {
+        localStorage.setItem("User", JSON.stringify(res.data.user));
+        if (res.data) {
+          setOpenLogin(false);
+          setTimeout(() => {
+            alert("Login Successful");
+            window.location.reload();
+          }, 2000);
+        }
+      })
+      .catch((error) => {
+        if (error) {
+          console.log(error);
+          alert("Error: " + error.response.data.message);
+          setTimeout(() => {}, 3000);
+        }
         console.log(error);
-        alert("Error : "+error.response.data.message);
-        setTimeout(()=>{},3000);
-      }
-      console.log(error);
-    })
-  }
+      });
+  };
+
   return (
     <div
       id="login-popup"
@@ -53,7 +61,9 @@ const Login = ({setOpenLogin}) => {
               fill="#c6c7c7"
               viewBox="0 0 20 20"
               xmlns="http://www.w3.org/2000/svg"
-              onClick={()=>{setOpenLogin(false)}}
+              onClick={() => {
+                setOpenLogin(false);
+              }}
             >
               <path
                 fillRule="evenodd"
@@ -61,7 +71,6 @@ const Login = ({setOpenLogin}) => {
                 clipRule="evenodd"
               ></path>
             </svg>
-            <span className="sr-only">Close popup</span>
           </button>
 
           <div className="p-5">
@@ -72,25 +81,16 @@ const Login = ({setOpenLogin}) => {
               <p className="mb-3 text-2xl font-semibold leading-5 text-slate-900">
                 Login to your account
               </p>
-              <p className="mt-2 text-sm leading-4 text-slate-600">
-                {/* You must be logged in to perform this action. */}
-              </p>
             </div>
 
-            <div className="mt-7 flex flex-col gap-2">
-             
-            </div>
+            <div className="mt-7 flex flex-col gap-2"></div>
 
             <div className="flex w-full items-center gap-2 py-6 text-sm text-slate-600">
               <div className="h-px w-full bg-slate-200"></div>
-              
-              <div className="h-px w-full bg-slate-200"></div>
             </div>
 
-            <form className="w-full"  onSubmit={handleSubmit(onSubmit)}  >
-              <label htmlFor="email" className="sr-only ">
-                Email address
-              </label>
+            <form className="w-full" onSubmit={handleSubmit(onSubmit)}>
+              <label htmlFor="email" className="sr-only"></label>
               <input
                 name="email"
                 type="email"
@@ -101,18 +101,23 @@ const Login = ({setOpenLogin}) => {
               <label htmlFor="password" className="sr-only">
                 Password
               </label>
-              <input
-                name="password"
-                type="password"
-                className="mt-2 block w-full rounded-lg border border-gray-300 px-3 py-2 shadow-sm outline-none placeholder:text-gray-400 focus:ring-2 focus:ring-black focus:ring-offset-1"
-                placeholder="Password"
-                {...register("password", { required: true })}
+              <div className="relative">
+                <input
+                  name="password"
+                  type={showPassword ? "text" : "password"}
+                  className="mt-2 block w-full rounded-lg border border-gray-300 px-3 py-2 shadow-sm outline-none placeholder:text-gray-400 focus:ring-2 focus:ring-black focus:ring-offset-1"
+                  placeholder="Password"
+                  {...register("password", { required: true })}
                 />
-              <p className="mb-3 mt-2 text-sm text-gray-500">
-                <a href="/forgot-password" className="text-blue-800 hover:text-blue-600">
-                  Reset your password?
-                </a>
-              </p>
+                <button
+                  type="button"
+                  onClick={togglePasswordVisibility}
+                  className="absolute inset-y-0 right-0 pr-3 flex items-center text-sm leading-5"
+                >
+                  {showPassword ? <FaEyeSlash /> : <FaEye />}
+                </button>
+              </div>
+              <br />
               <button
                 type="submit"
                 className="inline-flex w-full items-center justify-center rounded-lg bg-black p-2 py-3 text-sm font-medium text-white outline-none focus:ring-2 focus:ring-black focus:ring-offset-1 disabled:bg-gray-400"

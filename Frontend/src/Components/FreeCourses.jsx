@@ -11,7 +11,7 @@ function FreeCourses() {
   useEffect(()=>{
     const getBook=async()=>{
       try {
-        const res=await axios.get("http://localhost:8000/book")
+        const res=await axios.get("http://localhost:8000/book/")
         Record=res.data;
         setbooks(Record);
         
@@ -56,7 +56,7 @@ function FreeCourses() {
     ]
   };
 
-  const data = books.filter((obj) => obj.price === 0.00);
+  // const data = books.filter((obj) => obj.price === 0.00);
 
   return (
     <>
@@ -64,7 +64,7 @@ function FreeCourses() {
       <h1 className='text-2xl font-semibold underline underline-offset-8 decoration-4 decoration-sky-500 tracking-wide  my-10 dark:text-white'> Free Books </h1>
         <div className="slider-container">
           <Slider {...settings}>
-            {data.map((course, index) => (
+            {books.map((course, index) => (
               <Card key={index} {...course} />
             ))}
           </Slider>
